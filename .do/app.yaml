@@ -1,0 +1,13 @@
+name: catcoder-web
+static_sites:
+  - name: portfolio
+    github:
+      branch: main
+      deploy_on_push: true
+    source_dir: /
+    output_dir: dist
+    build_command: npm run build
+    catchall_document: index.html
+    error_document: 404.html
+    routes:
+      - path: /

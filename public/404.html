@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | CatCoder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0f1e3a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e5e7eb;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff851b 0%, #ff6b9d 50%, #c06fbb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 20px rgba(255, 133, 27, 0.3));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 30px rgba(255, 107, 157, 0.5));
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .quote {
+            font-size: 18px;
+            font-style: italic;
+            color: #ff851b;
+            margin: 24px 0;
+            padding: 20px;
+            border-left: 4px solid #ff851b;
+            background: rgba(255, 133, 27, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .message {
+            font-size: 16px;
+            color: #9ca3af;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .redirect-info {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 24px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 133, 27, 0.3);
+            border-radius: 50%;
+            border-top-color: #ff851b;
+            animation: spin 1s linear infinite;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        a {
+            color: #ff851b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff6b9d;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #ff851b, #ff6b9d);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 16px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 20px rgba(255, 133, 27, 0.3);
+        }
+
+        .home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(255, 133, 27, 0.5);
+            color: white;
+        }
+
+        .gif-container {
+            margin-bottom: 32px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 133, 27, 0.3);
+            box-shadow: 0 8px 32px rgba(255, 133, 27, 0.2);
+        }
+    </style>
+    <script>
+        // Redirect to index.html with the current path as a parameter
+        sessionStorage.setItem('redirectPath', window.location.pathname + window.location.search);
+
+        // Auto-redirect after 3 seconds
+        setTimeout(() => {
+            window.location.replace('/');
+        }, 3000);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Qui-Gon Jinn GIF -->
+        <div class="gif-container">
+            <img src="/assets/qui-gon-jinn.gif" alt="Qui-Gon Jinn" loading="lazy" decoding="async"
+                fetchpriority="low" />
+        </div>
+
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+
+        <div class="quote">
+            "Your focus determines your reality..."<br>
+            <small style="color: #9ca3af; font-size: 14px;">— And this page doesn't exist in our reality.</small>
+        </div>
+
+        <div class="message">
+            The page you're looking for has vanished—like a Jedi into the Force.<br>
+            Perhaps the archives are incomplete?
+        </div>
+
+        <a href="/" class="home-button">Return to Home</a>
+
+        <div class="redirect-info">
+            Auto-redirecting in a moment<span class="spinner"></span>
+        </div>
+    </div>
+</body>
+
+</html>
