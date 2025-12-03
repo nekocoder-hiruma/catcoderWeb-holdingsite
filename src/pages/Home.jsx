@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Code, Palette, Zap, ArrowRight } from 'lucide-react';
 import SkillCard from '../components/SkillCard';
@@ -67,13 +68,13 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/projects" className="group bg-orange text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange/50 flex items-center gap-2 justify-center">
+                    <Link to="/projects" className="group bg-orange text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange/50 flex items-center gap-2 justify-center">
                         {t('nav.projects')}
                         <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <a href="/history" className="bg-transparent border-2 border-purple text-white px-8 py-4 rounded-full font-bold hover:bg-purple hover:border-purple transition-all">
+                    </Link>
+                    <Link to="/history" className="bg-transparent border-2 border-purple text-white px-8 py-4 rounded-full font-bold hover:bg-purple hover:border-purple transition-all">
                         {t('nav.history')}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
