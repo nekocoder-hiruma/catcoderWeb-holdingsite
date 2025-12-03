@@ -5,7 +5,7 @@ import SkillCard from '../components/SkillCard';
 
 const Home = () => {
     const { t } = useTranslation();
-    const profilePic = '/assets/profile-picture.jpg';
+    const profilePic = '/assets/profile-picture.webp';
 
     const skills = [
         { icon: Code, label: t('skills.fullstack'), color: 'text-orange' },
