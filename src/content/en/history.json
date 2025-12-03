@@ -4,6 +4,7 @@
         "year": "Oct 2017 - Mar 2020",
         "title": "Senior Backend Developer",
         "company": "meta.us Pte. Ltd.",
+        "logo": "metaus",
         "description": "Led backend development for a comprehensive social media platform for e-sports athletes.\nBuilt backend API and integrated third party API for payment gateways.",
         "type": "work",
         "contributions": [
@@ -18,6 +19,7 @@
         "year": "Jun 2016 - Aug 2017",
         "title": "Mobile Application Developer",
         "company": "CyanSys Pte. Ltd.",
+        "logo": "cyansys",
         "description": "Developed and maintained mobile applications using C# and Xamarin for enterprise clients.\nBuilt a custom Android inventory management application for Skechers.",
         "type": "work",
         "projects": [
@@ -32,6 +34,7 @@
         "year": "Nov 2015 - Mar 2016",
         "title": "Junior Developer",
         "company": "Straits Interactive Pte. Ltd.",
+        "logo": "straits-interactive",
         "description": "Designed and developed client-facing web widgets for privacy and data compliance website.",
         "type": "work",
         "contributions": [
@@ -44,6 +47,7 @@
         "year": "Apr 2015 - Nov 2015",
         "title": "Junior Web Developer",
         "company": "Kamiworks Pte. Ltd.",
+        "logo": "kamiworks",
         "description": "Collaborated with clients to develop web solutions using Django or WordPress based on their requirements.\nHandled both development and maintenance for various client projects.",
         "type": "work",
         "projects": [
@@ -56,6 +60,7 @@
         "year": "Sep 2021 - Sep 2025",
         "title": "Bachelor of Engineering - Mechanical and Electrical Systems Engineering",
         "company": "Kyoto University of Advanced Science",
+        "logo": "kuas",
         "description": "Capstone Project: Designed an end-to-end IoT system with AWS storage, sensors and autonomous robot for precision agriculture.\nWeb System Development: Developed a web-based system for renting mobile batteries.\nLeadership: Vice President of International Student Council, Vice Chairman of Halloween Committee.",
         "type": "education",
         "additionalInfo": "Activities and Societies:\n• Member of Kyudo Club\n• Vice President of International Student Council\n• Vice Chairman of Halloween Committee\nAwards:\n• Received 2025 Best Club Award for outstanding contributions to campus engagement"
@@ -65,6 +70,7 @@
         "year": "Apr 2013 - May 2015",
         "title": "3D Interactive Media Technology",
         "company": "Temasek Polytechnic",
+        "logo": "temasek-polytechnic",
         "description": "3D Modeling and Animation using 3D Max and Cinema4D.\nBasic Programming with HTML, CSS, and ASP.net.\nWon Best Animation Project award.\nCompleted internship with EON Reality (Singapore and UK).",
         "type": "education",
         "additionalInfo": "Achievements:\n• Best Animation Project Award\nActivities:\n• Internship at EON Reality (Singapore & UK branches)\n• Created VR simulation program on renewable energy education"

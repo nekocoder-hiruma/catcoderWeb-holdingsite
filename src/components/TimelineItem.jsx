@@ -1,9 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Briefcase, GraduationCap, Star, FolderGit2 } from 'lucide-react';
+import usePublicAsset from '../hooks/usePublicAsset';
 
-const TimelineItem = ({ year, title, company, description, type, additionalInfo, projects, contributions }) => {
+const TimelineItem = ({ year, title, company, logo, description, type, additionalInfo, projects, contributions }) => {
     const { t } = useTranslation();
+    // Try to load company/school logo using explicit logo name
+    const logoSrc = logo ? usePublicAsset('/assets/companies/', logo) : null;
+
     const iconColor = type === 'work' ? 'text-orange' : 'text-magenta';
     const borderColor = type === 'work' ? 'border-orange' : 'border-magenta';
     const companyColor = type === 'work' ? 'text-maroon' : 'text-purple';
@@ -36,9 +40,15 @@ const TimelineItem = ({ year, title, company, description, type, additionalInfo,
 
             {/* Logo and Description Section */}
             <div className="flex gap-6 mb-4">
-                {/* Logo */}
-                <div className={`flex-shrink-0 w-16 h-16 rounded-lg bg-navy-800 border-2 ${borderColor} flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
-                    {type === 'work' ? (
+                {/* Logo or Icon */}
+                <div className={`flex-shrink-0 w-16 h-16 rounded-lg ${logoSrc ? 'bg-white' : 'bg-navy-800'} border-2 ${borderColor} flex items-center justify-center group-hover:scale-105 transition-transform duration-300 p-2`}>
+                    {logoSrc ? (
+                        <img
+                            src={logoSrc}
+                            alt={`${company} logo`}
+                            className="w-full h-full object-contain"
+                        />
+                    ) : type === 'work' ? (
                         <Briefcase size={32} className={iconColor} />
                     ) : (
                         <GraduationCap size={32} className={iconColor} />

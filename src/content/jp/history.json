@@ -4,6 +4,7 @@
         "year": "2017年10月 - 2020年3月",
         "title": "シニアバックエンド開発者",
         "company": "meta.us Pte. Ltd.",
+        "logo": "metaus",
         "description": "eスポーツアスリート向けソーシャルメディアプラットフォームのバックエンド開発を主導。\nバックエンドAPIの構築と決済ゲートウェイのサードパーティAPI統合を実施。",
         "type": "work",
         "contributions": [
@@ -18,6 +19,7 @@
         "year": "2016年6月 - 2017年8月",
         "title": "モバイルアプリケーション開発者",
         "company": "CyanSys Pte. Ltd.",
+        "logo": "cyansys",
         "description": "C#とXamarinを使用して企業クライアント向けのモバイルアプリケーションを開発・保守。\nSkechers向けのカスタムAndroid在庫管理アプリケーションを構築。",
         "type": "work",
         "projects": [
@@ -32,6 +34,7 @@
         "year": "2015年11月 - 2016年3月",
         "title": "ジュニア開発者",
         "company": "Straits Interactive Pte. Ltd.",
+        "logo": "straits-interactive",
         "description": "プライバシーとデータコンプライアンスのウェブサイト向けに、クライアント向けWebウィジェットを設計・開発。",
         "type": "work",
         "contributions": [
@@ -44,6 +47,7 @@
         "year": "2015年4月 - 2015年11月",
         "title": "ジュニアWeb開発者",
         "company": "Kamiworks Pte. Ltd.",
+        "logo": "kamiworks",
         "description": "クライアントの要件に基づき、DjangoまたはWordPressを使用してWebソリューションを開発。\n様々なクライアントプロジェクトの開発と保守を担当。",
         "type": "work",
         "projects": [
@@ -56,6 +60,7 @@
         "year": "2021年9月 - 2025年9月",
         "title": "工学士 - 機械・電気システム工学",
         "company": "京都先端科学大学",
+        "logo": "kuas",
         "description": "卒業研究プロジェクト：精密農業のためのAWSストレージ、センサー、自律ロボットを備えたエンドツーエンドのIoTシステムを設計。\nWebシステム開発：モバイルバッテリーレンタル用のWebベースシステムを開発。\nリーダーシップ：国際学生評議会副会長、ハロウィン委員会副委員長を務める。",
         "type": "education",
         "additionalInfo": "活動と団体：\n• 弓道部部員\n• 国際学生評議会副会長\n• ハロウィン委員会副委員長\n受賞歴：\n• 2025年ベストクラブ賞を受賞（キャンパス参加への優れた貢献により）"
@@ -65,6 +70,7 @@
         "year": "2013年4月 - 2015年5月",
         "title": "3Dインタラクティブメディアテクノロジー",
         "company": "テマセク・ポリテクニック",
+        "logo": "temasek-polytechnic",
         "description": "3D MaxとCinema4Dを使用した3Dモデリングとアニメーション。\nHTML、CSS、ASP.netを使用した基礎プログラミング。\nベストアニメーションプロジェクト賞を受賞。\nEON Reality（シンガポールおよび英国）でインターンシップを修了。",
         "type": "education",
         "additionalInfo": "成果：\n• ベストアニメーションプロジェクト賞\n活動：\n• EON Reality（シンガポール・英国支社）でインターンシップ\n• 再生可能エネルギー教育のVRシミュレーションプログラムを作成"
