@@ -1,10 +1,18 @@
 import { useState, useEffect } from 'react';
 
+const assetCache = new Map();
+
 const usePublicAsset = (basePath, fileName, extensions = ['png', 'jpg', 'jpeg', 'webp', 'svg']) => {
     const [assetPath, setAssetPath] = useState(null);
 
     useEffect(() => {
         if (!fileName) return;
+
+        const cacheKey = `${basePath}${fileName}`;
+        if (assetCache.has(cacheKey)) {
+            setAssetPath(assetCache.get(cacheKey));
+            return;
+        }
 
         let isMounted = true;
 
@@ -27,7 +35,10 @@ const usePublicAsset = (basePath, fileName, extensions = ['png', 'jpg', 'jpeg', 
             img.src = path;
 
             img.onload = () => {
-                if (isMounted) setAssetPath(path);
+                if (isMounted) {
+                    setAssetPath(path);
+                    assetCache.set(cacheKey, path);
+                }
             };
 
             img.onerror = () => {
@@ -46,7 +57,7 @@ const usePublicAsset = (basePath, fileName, extensions = ['png', 'jpg', 'jpeg', 
         return () => {
             isMounted = false;
         };
-    }, [basePath, fileName]);
+    }, [basePath, fileName]); // Removed extensions from dependency array to prevent re-runs
 
     return assetPath;
 };
