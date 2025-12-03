@@ -2,7 +2,8 @@
     "nav": {
         "home": "ホーム",
         "history": "経歴",
-        "projects": "プロジェクト"
+        "projects": "プロジェクト",
+        "contact": "お問い合わせ"
     },
     "intro": {
         "title": "ウォン・ワイキー",
@@ -25,5 +26,16 @@
         "notableProjects": "主なプロジェクト",
         "notableContributions": "主な貢献",
         "additionalActivities": "課外活動"
+    },
+    "contact": {
+        "title": "お問い合わせ",
+        "subtitle": "ご質問やご依頼はこちらから",
+        "name": "お名前",
+        "email": "メールアドレス",
+        "message": "メッセージ",
+        "send": "送信する",
+        "sending": "送信中...",
+        "success": "メッセージを送信しました！",
+        "error": "送信に失敗しました。もう一度お試しください。"
     }
 }

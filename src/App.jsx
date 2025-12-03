@@ -5,6 +5,9 @@ import Home from './pages/Home';
 import History from './pages/History';
 import Projects from './pages/Projects';
 
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import Contact from './pages/Contact';
+
 function AppRoutes() {
   const navigate = useNavigate();
 
@@ -23,6 +26,7 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/history" element={<History />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>
   );
@@ -30,9 +34,19 @@ function AppRoutes() {
 
 function App() {
   return (
-    <Router>
-      <AppRoutes />
-    </Router>
+    <GoogleReCaptchaProvider
+      reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+      scriptProps={{
+        async: false,
+        defer: false,
+        appendTo: 'head',
+        nonce: undefined,
+      }}
+    >
+      <Router>
+        <AppRoutes />
+      </Router>
+    </GoogleReCaptchaProvider>
   );
 }
 

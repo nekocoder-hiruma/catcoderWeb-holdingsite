@@ -2,7 +2,8 @@
     "nav": {
         "home": "首页",
         "history": "经历",
-        "projects": "项目"
+        "projects": "项目",
+        "contact": "联系"
     },
     "intro": {
         "title": "黄伟杰",
@@ -25,5 +26,16 @@
         "notableProjects": "主要项目",
         "notableContributions": "主要贡献",
         "additionalActivities": "课外活动"
+    },
+    "contact": {
+        "title": "联系我",
+        "subtitle": "有问题或想合作？",
+        "name": "姓名",
+        "email": "邮箱",
+        "message": "留言",
+        "send": "发送留言",
+        "sending": "发送中...",
+        "success": "留言发送成功！",
+        "error": "发送失败，请重试。"
     }
 }
