@@ -47,6 +47,8 @@ const TimelineItem = ({ year, title, company, logo, description, type, additiona
                             src={logoSrc}
                             alt={`${company} logo`}
                             className="w-full h-full object-contain"
+                            width="64"
+                            height="64"
                         />
                     ) : type === 'work' ? (
                         <Briefcase size={32} className={iconColor} />

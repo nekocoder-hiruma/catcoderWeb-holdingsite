@@ -66,6 +66,8 @@ const SkillCard = ({ name, icon: Icon }) => {
                             src={logoSrc}
                             alt={name}
                             className="w-full h-full object-contain"
+                            width="64"
+                            height="64"
                         />
                     </div>
                 ) : Icon ? (

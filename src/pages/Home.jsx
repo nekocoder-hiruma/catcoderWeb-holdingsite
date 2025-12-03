@@ -21,7 +21,13 @@ const Home = () => {
 
             <div className="relative z-10">
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full mb-8 overflow-hidden border-4 border-orange shadow-2xl shadow-orange/30 transition-all hover:scale-105 hover:border-magenta hover:shadow-magenta/30 duration-500 mx-auto">
-                    <img src={profilePic} alt="Profile" className="w-full h-full object-cover" />
+                    <img
+                        src={profilePic}
+                        alt="Profile"
+                        className="w-full h-full object-cover"
+                        width="256"
+                        height="256"
+                    />
                 </div>
 
                 <div className="mb-6 flex gap-6 justify-center">
