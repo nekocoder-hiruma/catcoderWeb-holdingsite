@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "title": "新加坡游戏协会(SGGA)定制CMS网站",
+        "description": "使用Django、PostGreSQL、Docker和Wagtail构建的全功能CMS网站门户。\n包含支付处理和管理员仪表板功能。",
+        "tags": [
+            "Django",
+            "PostGreSQL",
+            "Docker",
+            "Wagtail",
+            "HTMX",
+            "Tailwind CSS",
+            "Stripe集成",
+            "Pretix集成"
+        ],
+        "githubUrl": "#",
+        "liveUrl": "#",
+        "isProfessional": true
+    },
+    {
+        "id": 2,
+        "title": "个人作品集网站",
+        "description": "使用React和Tailwind CSS构建的现代化作品集网站。\n支持多语言切换功能。",
+        "tags": [
+            "React",
+            "Tailwind CSS",
+            "i18n"
+        ],
+        "githubUrl": "https://github.com/nekocoder-hiruma/catcoderWeb-holdingsite",
+        "liveUrl": "https://catcoder.tech/",
+        "isProfessional": false
+    },
+    {
+        "id": 3,
+        "title": "日本手语手势识别AI模型",
+        "description": "正在开发中的日本手语手势识别AI模型项目。\n项目目标：熟悉各种机器学习技术和模型。",
+        "tags": [
+            "React",
+            "Firebase",
+            "Redux"
+        ],
+        "githubUrl": "https://github.com/nekocoder-hiruma/JSL-simple-project",
+        "liveUrl": "#",
+        "isProfessional": true
+    }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "title": "シンガポールゲーム協会(SGGA)カスタムCMSウェブサイト",
+        "description": "Django、PostGreSQL、Docker、Wagtailで構築されたフル機能のCMSウェブポータル。\n決済処理と管理者ダッシュボードを含む。",
+        "tags": [
+            "Django",
+            "PostGreSQL",
+            "Docker",
+            "Wagtail",
+            "HTMX",
+            "Tailwind CSS",
+            "Stripe統合",
+            "Pretix統合"
+        ],
+        "githubUrl": "#",
+        "liveUrl": "#",
+        "isProfessional": true
+    },
+    {
+        "id": 2,
+        "title": "ポートフォリオウェブサイト",
+        "description": "ReactとTailwind CSSで構築されたモダンなポートフォリオウェブサイト。\n多言語対応機能を搭載。",
+        "tags": [
+            "React",
+            "Tailwind CSS",
+            "i18n"
+        ],
+        "githubUrl": "https://github.com/nekocoder-hiruma/catcoderWeb-holdingsite",
+        "liveUrl": "https://catcoder.tech/",
+        "isProfessional": false
+    },
+    {
+        "id": 3,
+        "title": "日本手話ジェスチャー認識AIモデル",
+        "description": "日本手話のジェスチャー認識AIモデルを開発する進行中のプロジェクト。\nプロジェクトの目的：様々な機械学習技術とモデルに習熟すること。",
+        "tags": [
+            "React",
+            "Firebase",
+            "Redux"
+        ],
+        "githubUrl": "https://github.com/nekocoder-hiruma/JSL-simple-project",
+        "liveUrl": "#",
+        "isProfessional": true
+    }
+]

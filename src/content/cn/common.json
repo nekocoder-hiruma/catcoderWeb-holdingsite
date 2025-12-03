@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "home": "首页",
+        "history": "经历",
+        "projects": "项目"
+    },
+    "intro": {
+        "title": "黄伟杰",
+        "description": "全栈开发者，热衷于为社区做出贡献。\n我的兴趣：编程、IoT系统和机器人。\n爱好：阅读、旅行和滑雪。"
+    },
+    "skills": {
+        "fullstack": "全栈开发",
+        "leadership": "充满热情",
+        "performance": "性能优化"
+    },
+    "projects": {
+        "professional": "专业项目",
+        "side": "个人项目"
+    },
+    "history": {
+        "workExperience": "工作经历",
+        "education": "教育背景"
+    },
+    "timeline": {
+        "notableProjects": "主要项目",
+        "notableContributions": "主要贡献",
+        "additionalActivities": "课外活动"
+    }
+}

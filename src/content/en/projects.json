@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "title": "Singapore Games Association(SGGA) CMS customised website",
+        "description": "A full-featured CMS web portal built with Django, PostGreSQL, Docker and Wagtail.\nIncludes payment processing and admin dashboard.",
+        "tags": [
+            "Django",
+            "PostGreSQL",
+            "Docker",
+            "Wagtail",
+            "HTMX",
+            "Tailwind CSS",
+            "Stripe Integration",
+            "Pretix Integration"
+        ],
+        "githubUrl": "#",
+        "liveUrl": "#",
+        "isProfessional": true
+    },
+    {
+        "id": 2,
+        "title": "Portfolio Website",
+        "description": "Modern portfolio website built with React and Tailwind CSS.\nFeatures multi-language support.",
+        "tags": [
+            "React",
+            "Tailwind CSS",
+            "i18n"
+        ],
+        "githubUrl": "https://github.com/nekocoder-hiruma/catcoderWeb-holdingsite",
+        "liveUrl": "https://catcoder.tech/",
+        "isProfessional": false
+    },
+    {
+        "id": 3,
+        "title": "JSL geature recognition AI model",
+        "description": "An ongoing project to develop an AI model for Japanese Sign Language gesture recognition.\nProject objective: To familiarize with the various machine learning techniques and models.",
+        "tags": [
+            "React",
+            "Firebase",
+            "Redux"
+        ],
+        "githubUrl": "https://github.com/nekocoder-hiruma/JSL-simple-project",
+        "liveUrl": "#",
+        "isProfessional": true
+    }
+]

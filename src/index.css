@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #001f3f;
+  --color-navy-700: #00294d;
+  --color-navy-800: #001a33;
+  --color-navy-900: #000d1a;
+  --color-maroon: #85144b;
+  --color-purple: #B10DC9;
+  --color-magenta: #F012BE;
+  --color-orange: #FF851B;
+  --color-orange-600: #e67300;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-white font-sans antialiased;
+  }
+
+  * {
+    @apply transition-colors duration-200;
+  }
+}

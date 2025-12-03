@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "home": "ホーム",
+        "history": "経歴",
+        "projects": "プロジェクト"
+    },
+    "intro": {
+        "title": "ウォン・ワイキー",
+        "description": "コミュニティに貢献するためのフルスタック開発者。\n私の興味:コーディング、IoTシステム、ロボット。\n趣味:読書、旅行、スキーリング。"
+    },
+    "skills": {
+        "fullstack": "フルスタック",
+        "leadership": "熱心",
+        "performance": "パフォーマンス"
+    },
+    "projects": {
+        "professional": "プロフェッショナルプロジェクト",
+        "side": "サイドプロジェクト"
+    },
+    "history": {
+        "workExperience": "職務経歴",
+        "education": "学歴"
+    },
+    "timeline": {
+        "notableProjects": "主なプロジェクト",
+        "notableContributions": "主な貢献",
+        "additionalActivities": "課外活動"
+    }
+}

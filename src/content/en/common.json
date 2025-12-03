@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "home": "Home",
+        "history": "History",
+        "projects": "Projects"
+    },
+    "intro": {
+        "title": "Wong Wai Keat",
+        "description": "Fullstack developer with a passion to contribute to the community.\n My interests: Coding, IoT systems and robotics.\n Hobbies: Reading, traveling and skiing."
+    },
+    "skills": {
+        "fullstack": "Fullstack",
+        "leadership": "Passionate",
+        "performance": "Performance"
+    },
+    "projects": {
+        "professional": "Professional Projects",
+        "side": "Passion Projects"
+    },
+    "history": {
+        "workExperience": "Work Experience",
+        "education": "Education"
+    },
+    "timeline": {
+        "notableProjects": "Notable Projects",
+        "notableContributions": "Notable Contributions",
+        "additionalActivities": "Additional Activities"
+    }
+}

@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "year": "2017年10月 - 2020年3月",
+        "title": "资深后端开发工程师",
+        "company": "meta.us Pte. Ltd.",
+        "description": "主导电子竞技运动员社交媒体平台的后端开发工作。\n构建后端API并集成第三方支付网关接口。",
+        "type": "work",
+        "contributions": [
+            "作为资深后端开发工程师参与完整的开发周期",
+            "支付网关集成（RazorPay、Paypal）",
+            "API性能优化",
+            "通过结对编程指导初级后端开发人员"
+        ]
+    },
+    {
+        "id": 2,
+        "year": "2016年6月 - 2017年8月",
+        "title": "移动应用开发工程师",
+        "company": "CyanSys Pte. Ltd.",
+        "description": "使用C#和Xamarin为企业客户开发和维护移动应用程序。\n为Skechers公司构建定制化的Android库存管理应用程序。",
+        "type": "work",
+        "projects": [
+            "Skechers库存管理应用（Android）"
+        ],
+        "contributions": [
+            "使用Bcrypt开发安全库以保护MySQL数据库"
+        ]
+    },
+    {
+        "id": 3,
+        "year": "2015年11月 - 2016年3月",
+        "title": "初级开发工程师",
+        "company": "Straits Interactive Pte. Ltd.",
+        "description": "为隐私和数据合规网站设计和开发面向客户的网页组件。",
+        "type": "work",
+        "contributions": [
+            "为动态用户仪表板创建定制组件",
+            "撰写组件和网站功能的技术文档"
+        ]
+    },
+    {
+        "id": 4,
+        "year": "2015年4月 - 2015年11月",
+        "title": "初级Web开发工程师",
+        "company": "Kamiworks Pte. Ltd.",
+        "description": "根据客户需求，使用Django或WordPress协作开发网站解决方案。\n负责多个客户项目的开发和维护工作。",
+        "type": "work",
+        "projects": [
+            "UOBSundays：大华银行的微型网站",
+            "Dstyle-boutique：小型精品店的WordPress网站"
+        ]
+    },
+    {
+        "id": 5,
+        "year": "2021年9月 - 2025年9月",
+        "title": "工学士 - 机械与电气系统工程",
+        "company": "京都先端科学大学",
+        "description": "毕业设计项目：设计了一个端到端的物联网系统，包含AWS存储、传感器和自主机器人，用于精准农业。\nWeb系统开发：开发了一个基于Web的移动电池租赁系统。\n学生领导：担任国际学生会副会长、万圣节委员会副主席。",
+        "type": "education",
+        "additionalInfo": "活动与社团：\n• 弓道俱乐部成员\n• 国际学生会副会长\n• 万圣节委员会副主席\n荣誉奖项：\n• 荣获2025年度最佳社团奖，表彰对校园参与的杰出贡献"
+    },
+    {
+        "id": 6,
+        "year": "2013年4月 - 2015年5月",
+        "title": "3D交互媒体技术",
+        "company": "淡马锡理工学院",
+        "description": "使用3D Max和Cinema4D进行3D建模和动画制作。\n学习HTML、CSS和ASP.net的基础编程。\n荣获最佳动画项目奖。\n在EON Reality（新加坡和英国）完成实习。",
+        "type": "education",
+        "additionalInfo": "成就：\n• 最佳动画项目奖\n活动经历：\n• 于EON Reality（新加坡及英国分公司）实习\n• 创建可再生能源教育的VR模拟程序"
+    }
+]
