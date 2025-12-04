@@ -1,9 +1,20 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import viteCompression from 'vite-plugin-compression';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    viteCompression({
+      algorithm: 'gzip',
+      ext: '.gz',
+    }),
+    viteCompression({
+      algorithm: 'brotliCompress',
+      ext: '.br',
+    }),
+  ],
   build: {
     // Generate hashed filenames for cache busting
     rollupOptions: {
@@ -12,6 +23,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           i18n: ['react-i18next', 'i18next'],
+          icons: ['lucide-react'],
         },
         // Use content hash for long-term caching
         entryFileNames: 'assets/[name]-[hash].js',
