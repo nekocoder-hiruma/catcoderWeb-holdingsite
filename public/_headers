@@ -1,6 +1,12 @@
 # Cache-Control Headers for DigitalOcean App Platform
 
 # HTML files - No caching for dynamic content routing
+/*
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /*.html
   Cache-Control: no-cache, no-store, must-revalidate
 
