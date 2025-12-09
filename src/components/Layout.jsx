@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
                             <span>&copy; {new Date().getFullYear()} CatCoder.</span>
                             <span>Built with</span>
                             <Heart size={16} className="text-maroon fill-maroon animate-pulse" />
-                            <span>using React & Tailwind</span>
+                            <span>using Preact & Tailwind</span>
                         </div>
                     </div>
                 </div>

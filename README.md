@@ -16,12 +16,10 @@ A modern, responsive, and multi-lingual portfolio website built with React, Vite
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 18
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Internationalization**: react-i18next
-- **Routing**: React Router
-- **Icons**: Lucide React
+- **Frontend**: Preact (via Vite), TailwindCSS, Framer Motion
+- **Internationalization**: i18next
+- **Forms**: React Hook Form, Google reCAPTCHA v3
+- **Deployment**: DigitalOcean App Platform
 - **Language**: JavaScript (ES6+)
 
 ## 📁 Project Structure
