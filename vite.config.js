@@ -1,16 +1,23 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import preact from '@preact/preset-vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [preact()],
+  resolve: {
+    alias: {
+      react: 'preact/compat',
+      'react-dom': 'preact/compat',
+      'react-dom/test-utils': 'preact/test-utils',
+    },
+  },
   build: {
     // Generate hashed filenames for cache busting
     rollupOptions: {
       output: {
         // Separate vendor chunks for better caching
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom', 'lucide-react', 'react-google-recaptcha', 'react-google-recaptcha-v3'],
+          vendor: ['preact', 'preact/compat', 'react-router-dom', 'lucide-react', 'react-google-recaptcha', 'react-google-recaptcha-v3'],
           i18n: ['react-i18next', 'i18next'],
         },
         // Use content hash for long-term caching
