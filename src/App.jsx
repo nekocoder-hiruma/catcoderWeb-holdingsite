@@ -1,7 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Layout from './components/Layout';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+
 import { Loader2 } from 'lucide-react';
 
 // Lazy load pages to reduce initial bundle size
@@ -49,19 +49,9 @@ function AppRoutes() {
 
 function App() {
   return (
-    <GoogleReCaptchaProvider
-      reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-      scriptProps={{
-        async: false,
-        defer: false,
-        appendTo: 'head',
-        nonce: undefined,
-      }}
-    >
-      <Router>
-        <AppRoutes />
-      </Router>
-    </GoogleReCaptchaProvider>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
 
