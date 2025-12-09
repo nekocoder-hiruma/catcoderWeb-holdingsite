@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { useGoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
-const Contact = () => {
+const ContactContent = () => {
     const { t } = useTranslation();
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [formData, setFormData] = useState({
@@ -40,7 +40,7 @@ const Contact = () => {
             }
 
             // Prepare data for Google Apps Script
-            // Note: Google Apps Script expects form data or URL encoded data usually, 
+            // Note: Google Apps Script expects form data or URL encoded data usually,
             // but we'll send JSON if the script is set up to handle it (doPost(e)).
             // Standard approach for simple scripts is often URLSearchParams.
             const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
@@ -185,6 +185,23 @@ const Contact = () => {
                 </div>
             </div>
         </div>
+    );
+};
+
+// Wrap the content with the provider so it only loads when this component matches the route
+const Contact = () => {
+    return (
+        <GoogleReCaptchaProvider
+            reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+            scriptProps={{
+                async: false,
+                defer: false,
+                appendTo: 'head',
+                nonce: undefined,
+            }}
+        >
+            <ContactContent />
+        </GoogleReCaptchaProvider>
     );
 };
 
