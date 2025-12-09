@@ -61,9 +61,9 @@
         "title": "Bachelor of Engineering - Mechanical and Electrical Systems Engineering",
         "company": "Kyoto University of Advanced Science",
         "logo": "kuas",
-        "description": "Capstone Project: Designed an end-to-end IoT system with AWS storage, sensors and autonomous robot for precision agriculture.\nWeb System Development: Developed a web-based system for renting mobile batteries.\nLeadership: Vice President of International Student Council, Vice Chairman of Halloween Committee.",
+        "description": "Immersed in Robotics, IoT, and Software Architecture, I focused on building practical solutions. My capstone project, an IoT system for precision agriculture utilizing AWS, Python, and autonomous robotics, was recognized with Silver and Bronze awards for its design and execution.\nBeyond coursework, I co-developed an NFC-based mobile battery loan system for the campus using Raspberry Pi.\nI also dedicated myself to community building, serving as Vice President of the International Student Council and Vice Chair of the Halloween Committee to bridge the gap between international and local students.",
         "type": "education",
-        "additionalInfo": "Activities and Societies:\n• Member of Kyudo Club\n• Vice President of International Student Council\n• Vice Chairman of Halloween Committee\nAwards:\n• Received 2025 Best Club Award for outstanding contributions to campus engagement"
+        "additionalInfo": "Activities and Societies:\n• Member of Kyudo Club\n• Vice President of International Student Council\n• Vice Chairman of Halloween Committee\nAwards:\n• Received 2025 Best Club Award for outstanding contributions to campus engagement\n• Received Bronze Award for Capstone Project mid-term presentation.\n• Received Silver Award for Capstone Project final presentation."
     },
     {
         "id": 6,
@@ -71,7 +71,7 @@
         "title": "3D Interactive Media Technology",
         "company": "Temasek Polytechnic",
         "logo": "temasek-polytechnic",
-        "description": "3D Modeling and Animation using 3D Max and Cinema4D.\nBasic Programming with HTML, CSS, and ASP.net.\nWon Best Animation Project award.\nCompleted internship with EON Reality (Singapore and UK).",
+        "description": "Built a strong foundation in VR/AR, 3D modeling, and interactive media. I earned the \"Best Animation Award\" during my second year and was selected for a distinctive international internship with EON Reality, split between Singapore and the UK. During this time, I became a certified EON Server Builder and developed a VR simulation focused on renewable energy education.",
         "type": "education",
         "additionalInfo": "Achievements:\n• Best Animation Project Award\nActivities:\n• Internship at EON Reality (Singapore & UK branches)\n• Created VR simulation program on renewable energy education"
     }
