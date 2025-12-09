@@ -1,29 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import viteCompression from 'vite-plugin-compression';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    viteCompression({
-      algorithm: 'gzip',
-      ext: '.gz',
-    }),
-    viteCompression({
-      algorithm: 'brotliCompress',
-      ext: '.br',
-    }),
-  ],
+  plugins: [react()],
   build: {
     // Generate hashed filenames for cache busting
     rollupOptions: {
       output: {
         // Separate vendor chunks for better caching
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
+          vendor: ['react', 'react-dom', 'react-router-dom', 'lucide-react', 'react-google-recaptcha', 'react-google-recaptcha-v3'],
           i18n: ['react-i18next', 'i18next'],
-          icons: ['lucide-react'],
         },
         // Use content hash for long-term caching
         entryFileNames: 'assets/[name]-[hash].js',
@@ -35,10 +23,13 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     // Enable source maps for production debugging (optional)
     sourcemap: false,
-    // Minify with esbuild (default, faster than terser)
-    minify: 'esbuild',
-    esbuild: {
-      drop: ['console', 'debugger'], // Remove console.logs and debuggers in production
+    // Minify with terser for smaller bundle size
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
     },
   },
   test: {
