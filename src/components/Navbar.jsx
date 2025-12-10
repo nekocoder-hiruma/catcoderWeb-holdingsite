@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0 flex items-center">
                         <Link to="/" className="flex items-center gap-2">
-                            <img src={logo} alt="CatCoder Logo" className="h-8 w-auto brightness-0 invert" />
+                            <img src={logo} alt="CatCoder Logo" className="h-8 w-auto brightness-0 invert" width={64} height={64} />
                             <span className="font-bold text-xl text-orange">CatCoder</span>
                         </Link>
                     </div>
