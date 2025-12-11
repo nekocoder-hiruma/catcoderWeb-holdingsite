@@ -10,12 +10,23 @@
   --color-magenta: #F012BE;
   --color-orange: #FF851B;
   --color-orange-600: #e67300;
-  --font-sans: 'Inter', sans-serif;
+
+  --font-sans: 'Open Sans', 'Inter', sans-serif;
+  --font-heading: 'Roboto', sans-serif;
 }
 
 @layer base {
   body {
     @apply bg-navy text-white font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 
   * {
