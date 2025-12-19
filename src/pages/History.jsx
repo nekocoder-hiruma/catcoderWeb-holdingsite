@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import TimelineItem from '../components/TimelineItem';
 import useTranslatedContent from '../hooks/useTranslatedContent';
 
@@ -13,6 +14,10 @@ const History = () => {
 
   return (
     <div className="max-w-3xl mx-auto">
+      <Helmet>
+        <title>{t('nav.history')} | Wong Wai Keat</title>
+        <meta name="description" content="My professional journey, work experience, and education history." />
+      </Helmet>
       <h1 className="text-4xl font-bold mb-12 text-center text-white">
         {t('nav.history')}
       </h1>
