@@ -1,33 +1,46 @@
-import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+
+// Static imports for all languages
+// English
+import enHistory from '../content/en/history.json';
+import enProjects from '../content/en/projects.json';
+
+// Chinese
+import cnHistory from '../content/cn/history.json';
+import cnProjects from '../content/cn/projects.json';
+
+// Japanese
+import jpHistory from '../content/jp/history.json';
+import jpProjects from '../content/jp/projects.json';
+
+const contentMap = {
+    en: {
+        history: enHistory,
+        projects: enProjects
+    },
+    cn: {
+        history: cnHistory,
+        projects: cnProjects
+    },
+    jp: {
+        history: jpHistory,
+        projects: jpProjects
+    }
+};
 
 const useTranslatedContent = (fileName) => {
     const { i18n } = useTranslation();
-    const [data, setData] = useState([]);
 
-    useEffect(() => {
-        const loadData = async () => {
-            try {
-                // Try to load content for the current language
-                // Vite requires extension to be static
-                const content = await import(`../content/${i18n.language}/${fileName}.json`);
-                setData(content.default);
-            } catch (error) {
-                try {
-                    // Fallback to English if translation not found
-                    const content = await import(`../content/en/${fileName}.json`);
-                    setData(content.default);
-                } catch (fallbackError) {
-                    console.error(`Failed to load content for ${fileName}`, fallbackError);
-                    setData([]);
-                }
-            }
-        };
+    // Get content for current language, fallback to English
+    const currentLangContent = contentMap[i18n.language] || contentMap['en'];
+    const data = currentLangContent[fileName];
 
-        loadData();
-    }, [i18n.language, fileName]);
+    // Fallback to English if specific file missing in target language
+    if (!data && i18n.language !== 'en') {
+        return contentMap['en'][fileName] || [];
+    }
 
-    return data;
+    return data || [];
 };
 
 export default useTranslatedContent;

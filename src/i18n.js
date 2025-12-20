@@ -6,7 +6,7 @@ import cnCommon from './content/cn/common.json';
 import jpCommon from './content/jp/common.json';
 
 // Get saved language from localStorage or default to 'en'
-const savedLanguage = localStorage.getItem('language') || 'en';
+const savedLanguage = typeof window !== 'undefined' ? localStorage.getItem('language') || 'en' : 'en';
 
 i18n
     .use(initReactI18next)
