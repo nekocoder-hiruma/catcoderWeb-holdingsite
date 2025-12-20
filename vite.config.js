@@ -3,7 +3,14 @@ import preact from '@preact/preset-vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [preact()],
+  plugins: [preact({
+    prerender: {
+      enabled: true,
+      renderTarget: '#root',
+      additionalPrerenderRoutes: ['/history', '/projects', '/contact'],
+      prerenderScript: './src/main.jsx',
+    },
+  })],
   resolve: {
     alias: {
       react: 'preact/compat',
