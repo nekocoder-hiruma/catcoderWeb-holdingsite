@@ -1,26 +1,10 @@
-import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Layout from './components/Layout';
-
-import { Loader2 } from 'lucide-react';
-
-// Lazy load pages to reduce initial bundle size
-const Home = lazy(() => import('./pages/Home'));
-const History = lazy(() => import('./pages/History'));
-const Projects = lazy(() => import('./pages/Projects'));
-const Contact = lazy(() => import('./pages/Contact'));
-
-// Loading fallback component
-const PageLoader = () => (
-  <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
-    <Loader2 className="animate-spin text-orange" size={48} />
-    <div className="text-center">
-      <p className="text-gray-300 italic text-lg">"Patience. Use the Force. Think."</p>
-      <p className="text-orange text-sm mt-2">— Qui-Gon Jinn</p>
-    </div>
-  </div>
-);
+import Home from './pages/Home';
+import History from './pages/History';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 function AppRoutes() {
   const navigate = useNavigate();
@@ -36,26 +20,18 @@ function AppRoutes() {
 
   return (
     <Layout>
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </Layout>
   );
 }
 
 function App() {
-  return (
-    <Router>
-      <HelmetProvider>
-        <AppRoutes />
-      </HelmetProvider>
-    </Router>
-  );
+  return <AppRoutes />;
 }
 
 export default App;

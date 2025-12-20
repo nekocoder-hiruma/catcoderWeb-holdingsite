@@ -1,20 +1,27 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import './i18n'
+import { hydrate, render } from 'preact';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './index.css';
+import './i18n';
 
-// Fonts
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import '@fontsource/open-sans/400.css';
-import '@fontsource/open-sans/500.css';
-import '@fontsource/open-sans/600.css';
-import '@fontsource/open-sans/700.css';
+if (typeof window !== 'undefined') {
+  // Use render instead of hydrate to prevent hydration mismatches 
+  // with react-router-dom v7 + preact/compat during initial path detection.
+  render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    document.getElementById('root')
+  );
+}
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+export async function prerender(data) {
+  const { renderToStringAsync } = await import('preact-render-to-string');
+  const { StaticRouter } = await import('react-router-dom');
+
+  return await renderToStringAsync(
+    <StaticRouter location={data.url}>
+      <App />
+    </StaticRouter>
+  );
+}

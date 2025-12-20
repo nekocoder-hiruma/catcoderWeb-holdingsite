@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
 import ProjectCard from '../components/ProjectCard';
 import useTranslatedContent from '../hooks/useTranslatedContent';
 
@@ -13,10 +12,6 @@ const Projects = () => {
 
     return (
         <div className="max-w-6xl mx-auto">
-            <Helmet>
-                <title>Projects | CatCoder</title>
-                <meta name="description" content="Showcase of Wai Keat's professional works and side projects." />
-            </Helmet>
             <h1 className="text-4xl font-bold mb-12 text-center text-white">
                 {t('nav.projects')}
             </h1>

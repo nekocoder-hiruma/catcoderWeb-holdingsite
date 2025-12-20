@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Code, Palette, Zap, ArrowRight } from 'lucide-react';
 import SkillCard from '../components/SkillCard';

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useGoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
-import { Helmet } from 'react-helmet-async';
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
 const ContactContent = () => {
@@ -81,10 +80,6 @@ const ContactContent = () => {
 
     return (
         <div className="min-h-screen pt-24 px-4 pb-12 flex items-center justify-center">
-            <Helmet>
-                <title>Contact Me | Wong Wai Keat</title>
-                <meta name="description" content="Contact Wai Keat for inquiries or collaboration." />
-            </Helmet>
             <div className="w-full max-w-lg">
                 <div className="text-center mb-10">
                     <h1 className="text-4xl font-bold text-white mb-4">{t('contact.title')}</h1>
