@@ -6,96 +6,81 @@ This document tracks the evolution of the `catcoderWeb-holdingsite` project, hig
 
 | Date | Milestone | Learning Points | Potential Improvement Points |
 | :--- | :--- | :--- | :--- |
-| **2025-12-31** | **Folder Restructuring** | Transitioned to **Feature-based Architecture** (Bulletproof React). Encapsulates logic by area rather than file type. | Standardize feature entry points (`index.js`). |
-| **2025-12-20** | **Pre-rendering** | Switched from `react-helmet` to **Static Prerendering**. Static HTML is superior for SEO and TTI (Time to Interactive). | Auto-scan routes for the prerenderer. |
-| **2025-12-20** | **Static Data** | Moved to **Synchronous Static Imports**. Async data during hydration causes content "flicker". | Localized JSON chunking if content grows. |
+| **2025-12-31** | **Folder Restructuring** | Transitioned to **Feature-based Portfolio Architecture** (Bulletproof React). | Standardize feature entry points (`index.js`). |
+| **2025-12-20** | **Pre-rendering** | Switched from `react-helmet` to **Static Prerendering**. Superior for SEO/TTI. | Auto-scan routes for the prerenderer. |
 | **2025-12-20** | **Hydration Fix** | Used `render` in `main.jsx` to resolve path mismatches during boot. | Revisit `hydrate` once routing is stable. |
-| **2025-12-11** | **CLS Optimization** | Fixed **Cumulative Layout Shift** with fixed aspect ratios and font preloading. | Automated image pipeline (WebP). |
-| **2025-12-09** | **React to Preact** | Switched to **Preact** for 1/10th the bundle size (~30KB total). | Remove standard React dependencies. |
-| **2025-12-09** | **Script Loading** | **Conditional Loading** of ReCAPTCHA (Contact page only). | Lazy-load heavy third-party widgets. |
-| **2025-12-03** | **SPA Navigation** | **Client-side Routing** via `Link` vs browser-level `<a>` tags. | Page transition animations. |
+| **2025-12-11** | **Web Vitals** | Fixed **Cumulative Layout Shift** with fixed aspect ratios and font preloading. | Automated image pipeline (WebP). |
+| **2025-12-09** | **React to Preact** | Switched framework to **Preact** to reduce bundle size from ~150KB to <30KB. | Remove standard React dependencies. |
+| **2025-12-03** | **Major Portfolio Revamp** | **Modern SPA Refactor**: Replaced old static HTML with a React-based architecture. Learned how to manage global state and complex UI components. | Implement transition animations between pages. |
+| **2025-12-03** | **WebP Transition** | Optimized performance by converting all logo and profile assets to **WebP format**. Learned that WebP offers ~30-40% better compression than PNG. | Automate asset conversion via Vite plugin. |
+| **2022-02-05** | **Modern Tooling Init** | **Tailwind & Webpack Introduction**: First step away from pure static HTML towards modern utility-first CSS. Learned the power of atomic classes for consistent UI. | Migration from Webpack to Vite (completed in 2025). |
+| **2021-02-14** | **SEO & Analytics** | Added **Sitemap & Google Analytics**. Learned the importance of indexing and tracking traffic early in a project's life. | Move script injection to build-time templates. |
+| **2021-02-09** | **Asset Delivery** | Integrated **Dexecure CDN**. Learned that serving huge images directly from the server is a bottleneck for international users. | Use responsive image sets (`srcset`) for different screens. |
+| **2020-12-27** | **Initial Foundation** | Project launched with a **Jekyll Theme**. Learned the basics of GitHub Pages, CNAME, and `.htaccess` redirects. | Move away from rigid themes (completed). |
 
 ---
 
 ## Technical Deep Dive: Good vs. Bad Examples
 
-### 1. Folder Structure (Scalability)
-**❌ Bad: Type-Based (Flat)**
-```text
-src/
-├── components/   # 50+ mixed files
-├── hooks/
-└── pages/
-```
-**✅ Good: Feature-Based (Bulletproof)**
-```text
-src/features/
-├── history/
-│   ├── components/
-│   └── routes/   # Logic isolated to History
-```
-
-### 2. SPA Navigation (User Experience)
-**❌ Bad: Full Page Reload**
-```javascript
-// Causes white flash and state loss
-<a href="/history">History</a>
-```
-**✅ Good: Instant Transition**
-```javascript
-// Navigates purely via Javascript (no reload)
-<Link to="/history">History</Link>
-```
-
-### 3. Cumulative Layout Shift (Web Vitals)
-**❌ Bad: Content "Jumps" on load**
-```javascript
-// Browser doesn't know height until image downloads
-<img src="profile.jpg" />
-```
-**✅ Good: Reserved Space**
-```javascript
-// Browser reserves 64px, preventing layout shift
-<img src="profile.jpg" width="64" height="64" />
-```
-
-### 4. Search Engine Optimization (SEO)
-**❌ Bad: Client-Side Meta**
-```javascript
-// Search crawlers may see empty page initially
-<Helmet><title>My Site</title></Helmet>
-```
-**✅ Good: Prerendered HTML**
-```javascript
-// vite.config.js - Generates full index.html for every route
-prerender: { enabled: true }
-```
-
-### 5. Data Loading (Hydration)
-**❌ Bad: Async "Flicker"**
-```javascript
-// Data arrives AFTER the page shows, causing a flash
-useEffect(() => { 
-  import(`./${lang}.json`).then(setData); 
-}, []);
-```
-**✅ Good: Sync Stability**
-```javascript
-// Data is part of the initial bundle
-import enHistory from '../content/en/history.json';
-const data = contentMap[lang];
-```
-
-### 6. Script Optimization (Performance)
-**❌ Bad: Global Burden**
+### 1. Asset Formats (Performance)
+**❌ Bad: Legacy Formats**
 ```html
-<!-- Loads on EVERY page, even if never used -->
-<script src="recaptcha.js"></script>
+<!-- Large file size, no transparency support for JPEG, heavy PNGs -->
+<img src="logo.png" /> <!-- 150KB -->
 ```
-**✅ Good: Contextual Load**
+**✅ Good: Modern WebP/AVIF**
+```html
+<!-- Superior compression, same quality -->
+<img src="logo.webp" /> <!-- 30KB -->
+```
+
+### 2. Styling Strategy (Maintainability)
+**❌ Bad: Custom CSS Spaghetti**
+```css
+.card { padding: 20px; color: #fff; border-radius: 8px; }
+.card-large { padding: 40px; } /* Hard to maintain across files */
+```
+**✅ Good: Utility-First (Tailwind)**
+```html
+<!-- Fully descriptive, no side effects, instant feedback -->
+<div class="p-5 text-white rounded-lg hover:bg-navy-800 transition-all">
+```
+
+### 3. SEO Metadata (Visibility)
+**❌ Bad: Generic or Missing Meta**
+```html
+<title>My Portfolio</title>
+```
+**✅ Good: Semantic & Social-Ready**
+```html
+<title>Wong Wai Keat | Senior Backend Developer</title>
+<meta property="og:description" content="Portfolio of a Senior Developer focused on Performance and Scalability." />
+```
+
+### 4. Code Organization (Scalability)
+**❌ Bad: Logic in View (Jekyll Era)**
+```html
+<!-- Logic buried in HTML templates makes it hard to test -->
+{% for item in items %} <div>{{ item.title }}</div> {% endfor %}
+```
+**✅ Good: Component-Based (Preact Era)**
 ```javascript
-// Only executes when the Contact component mounts
-useEffect(() => { /* Load ReCAPTCHA only here */ }, []);
+// Logic is isolated and reusable
+const TimelineItem = ({ title, year }) => (
+  <h3>{title} <span>({year})</span></h3>
+);
+```
+
+### 5. Routing Implementation (SPA)
+**❌ Bad: Hard Redirects**
+```javascript
+// Forces browser to reload everything, losing page state
+<a href="/projects">View Projects</a>
+```
+**✅ Good: Client-Side Links**
+```javascript
+// Swaps out only the content, keeping the app alive
+<Link to="/projects">View Projects</Link>
 ```
 
 ---
