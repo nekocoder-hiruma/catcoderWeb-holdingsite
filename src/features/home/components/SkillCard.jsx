@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import usePublicAsset from '../hooks/usePublicAsset';
+import usePublicAsset from '../../../hooks/usePublicAsset';
 
 const SkillCard = ({ name, icon: Icon }) => {
     const cardRef = useRef(null);

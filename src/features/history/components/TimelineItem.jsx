@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Briefcase, GraduationCap, Star, FolderGit2 } from 'lucide-react';
-import usePublicAsset from '../hooks/usePublicAsset';
+import usePublicAsset from '../../../hooks/usePublicAsset';
 
 const TimelineItem = ({ year, title, company, logo, description, type, additionalInfo, projects, contributions }) => {
     const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import TimelineItem from '../components/TimelineItem';
-import useTranslatedContent from '../hooks/useTranslatedContent';
+import useTranslatedContent from '../../../hooks/useTranslatedContent';
 
 const History = () => {
   const { t } = useTranslation();

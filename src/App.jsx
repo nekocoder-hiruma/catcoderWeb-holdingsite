@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Layout from './components/Layout';
-import Home from './pages/Home';
-import History from './pages/History';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import { AppRoutes } from './routes';
 
-function AppRoutes() {
+function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,18 +17,9 @@ function AppRoutes() {
 
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <AppRoutes />
     </Layout>
   );
-}
-
-function App() {
-  return <AppRoutes />;
 }
 
 export default App;

@@ -1,9 +1,9 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import enCommon from './content/en/common.json';
-import cnCommon from './content/cn/common.json';
-import jpCommon from './content/jp/common.json';
+import enCommon from '../content/en/common.json';
+import cnCommon from '../content/cn/common.json';
+import jpCommon from '../content/jp/common.json';
 
 // Get saved language from localStorage or default to 'en'
 const savedLanguage = typeof window !== 'undefined' ? localStorage.getItem('language') || 'en' : 'en';

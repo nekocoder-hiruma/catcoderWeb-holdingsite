@@ -2,7 +2,7 @@ import { hydrate, render } from 'preact';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
-import './i18n';
+import './lib/i18n';
 
 if (typeof window !== 'undefined') {
   // Use render instead of hydrate to prevent hydration mismatches 

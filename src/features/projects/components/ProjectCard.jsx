@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, ExternalLink, Folder } from 'lucide-react';
-import usePublicAsset from '../hooks/usePublicAsset';
+import usePublicAsset from '../../../hooks/usePublicAsset';
 
 const ProjectCard = ({ title, description, tags, githubUrl, liveUrl }) => {
     const tagColors = ['text-rose-700', 'text-amber-700', 'text-orange', 'text-yellow-700'];
@@ -11,7 +11,6 @@ const ProjectCard = ({ title, description, tags, githubUrl, liveUrl }) => {
 
     return (
         <div className="group bg-gradient-to-br from-navy-800 to-navy-900 rounded-2xl overflow-hidden border-2 border-navy-700 hover:border-orange transition-all duration-300 select-none cursor-default flex flex-col h-full">
-            {/* Image or Icon Header */}
             {/* Image or Icon Header */}
             <div className="w-full h-48 overflow-hidden relative bg-navy-800 flex items-center justify-center">
                 {imageSrc ? (

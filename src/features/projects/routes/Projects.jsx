@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ProjectCard from '../components/ProjectCard';
-import useTranslatedContent from '../hooks/useTranslatedContent';
+import useTranslatedContent from '../../../hooks/useTranslatedContent';
 
 const Projects = () => {
     const { t } = useTranslation();
