@@ -1,16 +1,75 @@
 import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [preact({
-    prerender: {
-      enabled: true,
-      renderTarget: '#root',
-      additionalPrerenderRoutes: ['/history', '/projects', '/contact'],
-      prerenderScript: './src/main.jsx',
-    },
-  })],
+  plugins: [
+    preact({
+      prerender: {
+        enabled: true,
+        renderTarget: '#root',
+        additionalPrerenderRoutes: ['/history', '/projects', '/contact'],
+        prerenderScript: './src/main.jsx',
+      },
+    }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      manifest: {
+        name: 'CatCoder Portfolio',
+        short_name: 'CatCoder',
+        description: 'Software Engineer Portfolio - Backend & IoT Specialist',
+        theme_color: '#0a192f',
+        background_color: '#0a192f',
+        display: 'standalone',
+        icons: [
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable'
+          }
+        ]
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff,woff2}'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ request }) => request.mode === 'navigate',
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'pages-cache',
+              expiration: {
+                maxEntries: 50,
+              },
+            },
+          },
+          {
+            urlPattern: ({ request }) => request.destination === 'image',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'images-cache',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 12 * 30 * 24 * 60 * 60, // 1 year
+              },
+            },
+          }
+        ]
+      }
+    })
+  ],
   resolve: {
     alias: {
       react: 'preact/compat',

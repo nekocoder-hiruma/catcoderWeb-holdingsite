@@ -3,8 +3,12 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import './lib/i18n';
+import { registerSW } from 'virtual:pwa-register';
 
 if (typeof window !== 'undefined') {
+  // Register Service Worker
+  registerSW({ immediate: true });
+
   // Use render instead of hydrate to prevent hydration mismatches 
   // with react-router-dom v7 + preact/compat during initial path detection.
   render(
