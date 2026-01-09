@@ -6,6 +6,7 @@ This document tracks the evolution of the `catcoderWeb-holdingsite` project, hig
 
 | Date | Milestone | Learning Points | Potential Improvement Points |
 | :--- | :--- | :--- | :--- |
+| **2026-01-10** | **Platform Headers** | **Hosting Specificity**: Learned that DigitalOcean ignores the `_headers` file (convention for Netlify/Cloudflare). Headers must be in `app.yaml`. | Automate header injection into App Spec via CI/CD. |
 | **2025-12-31** | **Folder Restructuring** | Transitioned to **Feature-based Portfolio Architecture** (Bulletproof React). | Standardize feature entry points (`index.js`). |
 | **2025-12-20** | **Pre-rendering** | Switched from `react-helmet` to **Static Prerendering**. Superior for SEO/TTI. | Auto-scan routes for the prerenderer. |
 | **2025-12-20** | **Hydration Fix** | Used `render` in `main.jsx` to resolve path mismatches during boot. | Revisit `hydrate` once routing is stable. |
@@ -81,6 +82,23 @@ const TimelineItem = ({ title, year }) => (
 ```javascript
 // Swaps out only the content, keeping the app alive
 <Link to="/projects">View Projects</Link>
+```
+
+### 6. Caching & Headers (Deployment)
+**❌ Bad: Generic Header Files**
+```text
+# ignored by DigitalOcean App Platform
+/*
+  Cache-Control: no-cache
+```
+**✅ Good: Platform-Native Config**
+```yaml
+# .do/app.yaml
+    routes:
+      - path: /
+        headers:
+          - key: Cache-Control
+            value: "max-age=0, must-revalidate, public"
 ```
 
 ---
