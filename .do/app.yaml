@@ -1,6 +1,7 @@
-name: catcoder-web
+name: catcoder-web-holdingsite
+disable_edge_cache: true
 static_sites:
-  - name: portfolio
+  - name: catcoder-web-holdingsite
     github:
       branch: main
       deploy_on_push: true
